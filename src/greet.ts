@@ -3,16 +3,16 @@ export function greet(who: string): string {
 }
 
 export function adder(one: number, two: number) {
-  let res = one + two;
+  const res = one + two;
   return `${one} plus ${two} is ${res}!`;
 }
 
-//let e: true = true;
-//let f: false = false;
+// let e: true = true;
+// let f: false = false;
 
-let g: 100n = 100n;
+const g: 100n = 100n;
 
-let obj: {
+const obj: {
   familyName: string;
   dysfunctional: boolean;
 } = {
@@ -21,7 +21,13 @@ let obj: {
 };
 
 export class Family {
-  constructor(public familyName: string, public dysfunctional: boolean) {}
+  constructor(familyName: string, public dysfunctional: boolean) {}
 }
 
-let instance = new Family("Fröberg", true);
+const instance = new Family("Norman", true);
+
+function tuple<T extends unknown[]>(...ts: T): T {
+  return ts;
+}
+
+const t1 = tuple(1, "apa", true);
