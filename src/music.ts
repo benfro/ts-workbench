@@ -32,7 +32,7 @@ export class Pitch {
   }
 
   nextNote(): Note {
-    let nNote: Record<Note, Note> = {
+    const nNote: Record<Note, Note> = {
       C: "D",
       D: "E",
       E: "F",
